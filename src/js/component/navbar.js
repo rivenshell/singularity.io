@@ -1,16 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import blue from "../../img/singluarity.jpg";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
+		<nav className="navbar ">
+			<div className="container-fluid">
+				<Link className="navbar-brand" to="/">
+					<img src={blue} width="50" height="50" className="d-inline-block align-text-top" />
 				</Link>
+
+				<div className="d-flex" role="search">
+
+					<Link to="/demo">
+						<button className="btn btn-primary">Check the Context in action</button>
+					</Link>
+				</div>
 			</div>
 		</nav>
 	);
